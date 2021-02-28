@@ -24,6 +24,7 @@ module.exports = {
             title: "webpack-project",
             template: path.resolve(__dirname, "./src/index.html"), // шаблон
             filename: "index.html", // название выходного файла
+            inject: 'body',
             inify: { collapseWhitespace: true },
         }),
         new HtmlWebpackPlugin({
@@ -31,6 +32,7 @@ module.exports = {
             template: path.resolve(__dirname, "./src/all-animals.html"), // шаблон
             filename: "all-animals.html", // название выходного файла
             inify: { collapseWhitespace: true },
+            inject: 'body',
         }),
         new CopyPlugin({
             patterns: [{ from: "./src/img/", to: "./img/" }],
@@ -53,7 +55,7 @@ module.exports = {
                     name: "./fonts/[name].[ext]",
                 },
             },
-            
+
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
