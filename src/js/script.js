@@ -65,24 +65,24 @@ $(document).ready(function(){
 });
  
   // Get the modal "Волонтерство"
- var modal = document.getElementById("myVolun");
+ var modal1 = document.getElementById("myVolun");
  // Get the button that opens the modal
- var btn = document.getElementById("myVolun-btn");
+ var btn1 = document.getElementById("myVolun-btn");
 
  // Get the <span> element that closes the modal
- var span = document.getElementsByClassName("one")[0];
+ var span1 = document.getElementsByClassName("one")[0];
  // When the user clicks the button, open the modal 
- btn.onclick = function () {
-     modal.style.display = "flex";
+ btn1.onclick = function () {
+     modal1.style.display = "flex";
  }
  // When the user clicks on <span> (x), close the modal
- span.onclick = function () {
-     modal.style.display = "none";
+ span1.onclick = function () {
+     modal1.style.display = "none";
  }
  //WhenTheUserClicksAnywhereOutsideOfTheModal,CloseIt
  window.onclick = function (event) {
-     if (event.target == modal) {
-         modal.style.display = "none";
+     if (event.target == modal1) {
+         modal1.style.display = "none";
      }
  }
 
